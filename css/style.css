@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.flex-container{
+    display: flex;
+    flex-direction: column;
+}
+section{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    height: 100vh;
+}
+#cover_page{
+    align-items: center;
+}
+header{
+    width: 100%;
+    padding: 10px 20px;
+}
+header img{
+    width: 100px;
+}
+.presentation{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: "Cream Cake";
+}
+.presentation .text_presentation{
+    flex: 1;
+}
+.presentation .text_presentation p:first-child{
+    color: gray;
+    font-size: 40px;
+}
+.presentation .text_presentation p:nth-child(2){
+    font-size: 60px;
+}
+.presentation .text_presentation p{
+    font-size: 25px;
+}
+.presentation .cover_page_images{
+    flex: 0 0 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.presentation .cover_page_images img:nth-child(1){
+    width: 70%;
+}
+.presentation .cover_page_images img{
+    width: 50%;
+    padding: 5px;
+}
+@media screen and (max-width: 800px){
+    section{
+        height: auto;
+    }
+    .presentation{
+        flex-direction: column;
+    }
+    .presentation .cover_page_images{
+        flex: 0 0 100%;
+    }
+    .presentation .cover_page_images img{
+        width: 33.33% !important;
+        max-width: 253px;
+        flex: 1 1 auto;
+    }
+}
+@media screen and (max-width: 600px){
+    .presentation .cover_page_images img{
+        width: 100% !important;
+        max-width: 100%;
+        flex: 1 1 auto;
+    }
+}
